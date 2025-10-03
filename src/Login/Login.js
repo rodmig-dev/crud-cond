@@ -10,8 +10,8 @@ function Login({onLogin}){
         onLogin(username, password);
     }
     return(
-        <div>
-            <form onSubmit={handelSubmit} >
+        <div className="login-container">
+            <form className="login-form" onSubmit={handelSubmit} >
                 <h2>Agenda de Contatos</h2>
                 <p>Faça login para continuar</p>
                 <input

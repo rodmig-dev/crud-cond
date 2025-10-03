@@ -1,11 +1,11 @@
 import React, {useState} from "react";
-import '/.App.css';
+import './App.css';
 
 //Importa os componentes de seus respectivos arquivos
 import Login from './Login/Login';
 import Menu from './Menu/Menu';
 import Welcome from'./Welcome/Welcome';
-import ContactList from './ContactForm/ContactList';
+import ContactList from './ContactList/ContactList';
 import ContactForm from './ContactForm/ContactForm';
 
 
