@@ -26,6 +26,7 @@ function Login({onLogin}){
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
+                <button type="submit">Entrar aqui</button>
             </form>
         </div>
     )

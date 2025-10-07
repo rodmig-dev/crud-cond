@@ -8,11 +8,10 @@ import Welcome from'./Welcome/Welcome';
 import ContactList from './ContactList/ContactList';
 import ContactForm from './ContactForm/ContactForm';
 
-
 function App(){
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [activeScreen, setActiveScreen] = useState('welcome');
+  const [activeScreen, setActiveScreen] = useState('Welcome');
   const [contacts, setContacts] = useState([
     {id: 1, name: 'João Silva', phone: '11987654321'},
     {id: 2, name: 'Maria Silva', phone: '11123456789'}]);
@@ -44,7 +43,7 @@ function App(){
       <div>
         <Menu onNavigate = {handleNavigate} onCreate={showCreateForm}/>
         <main className="content">
-          {activeScreen === 'welcome' && <welcome/>}
+          {activeScreen === 'Welcome' && <Welcome/>}
           {activeScreen === 'list' && <ContactList contacts={contacts}
                              onEdit={startEdit} 
                              onDelete={handleDeleteContact}/>}
