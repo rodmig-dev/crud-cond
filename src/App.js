@@ -37,12 +37,32 @@ function App() {
       setContacts([...contacts, contact]);
       alert("Contato cadastrado com sucesso");
     }
+    setActiveScreen("list");
+    setContactToEdit(null);
   };
 
-  const handleDeleteContact = (id) => {};
-  const startEdit = (contact) => {};
-  const showCreateForm = () => {};
-  const handleNavigate = (screen) => {};
+  const handleDeleteContact = (id) => {
+    setContacts(contacts.filter((c) => c.id !== id));
+    alert("Contato removido com sucesso!");
+  };
+
+  const startEdit = (contact) => {
+    setContactToEdit(contact);
+    setActiveScreen("form");
+  };
+
+  const showCreateForm = () => {
+    setContactToEdit(null);
+    setActiveScreen("form");
+  };
+
+  const handleNavigate = (screen) => {
+    if (screen === "logout") {
+      setIsLoggedIn(false);
+    } else {
+      setActiveScreen(screen);
+    }
+  };
 
   if (!isLoggedIn) {
     return <Login onLogin={handleLogin} />;
